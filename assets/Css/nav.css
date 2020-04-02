@@ -1,4 +1,4 @@
-.container {
+.container1{
     width: 80%;
     margin: 0 auto;
 }
@@ -14,14 +14,36 @@ body {
     margin-left: 80px;
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTX2ICd1LVk-zzRzWN9aQXkc91PiSv40SxBqwhADc4GZz_tCdF5");
     background-repeat: repeat-x;
+    
 }
 
 p {
-    font-size: 20px;
+    font-size: 30px;
+    animation-duration: 3s;
+    animation-name: slidein;
 }
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+
 
 p2 {
     font-size: 30px;
+}
+
+button {
+    background-color: #0b2d4c;
+    color: white;
 }
 
 
@@ -34,6 +56,7 @@ header {
     background: #0b2d4c;
     font-size: 25px;
     text-align: center;
+    color: white;
 }
 
 header after {
@@ -75,7 +98,7 @@ nav li {
 }
 
 nav a {
-    color: #444;
+    color: white;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
@@ -108,7 +131,7 @@ nav a:hover::before {
     width: 100%;
     margin: 0 auto;
     background-color: #0b2d4c;
-    color: black;
+    color: white;
     float: left;
     padding: 10px 0;
     text-align: center;
@@ -116,6 +139,46 @@ nav a:hover::before {
     font-size: 30px;
     
  }
+
+ .container {
+    display: flex;
+    width: 95%;
+    padding: 4% 2%;
+    box-sizing: border-box;
+    height: 100%;
+  }
+  
+  .box {
+    flex: 1;
+    overflow: hidden;
+    transition: .5s;
+    margin: 0 2%;
+    box-shadow: 0 20px 30px rgba(0,0,0,.1);
+    line-height: 0;
+  }
+  
+  .button > img {
+    /* width: 150%;
+    height: calc(100% - 10vh); */
+    width: 250px;
+    height: 150px;
+    object-fit: cover; 
+    transition: .5s;
+  }
+  
+  .box > span {
+    font-size: 35px;
+    display: block;
+    text-align: center;
+    height: 10vh;
+    line-height: 2.6;
+  }
+  
+  .box:hover { flex: 1 1 50%; }
+  .box:hover > img {
+    width: 75%;
+    height: 75%;
+  }
 
 
  .wrapper {
@@ -141,13 +204,14 @@ border-radius:15px;
 -webkit-border-radius:15px;
 } 
 
+
 @keyframes animated_div
 {
 0% {transform: rotate(0deg);left:0px;}
-25% {transform: rotate(20deg);left:0px;}
-50% {transform: rotate(0deg);left:500px;}
-55% {transform: rotate(0deg);left:500px;}
-70% {transform: rotate(0deg);left:500px;background:#0b2d4c;}
+25% {transform: rotate(65deg);left:0px;}
+50% {transform: rotate(0deg);left:2000px;}
+55% {transform: rotate(0deg);left:2000px;}
+70% {transform: rotate(0deg);left:2000px;background:#0b2d4c;}
 100% {transform: rotate(-360deg);left:0px;}
 }
 
